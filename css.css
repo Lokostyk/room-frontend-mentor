@@ -1,0 +1,214 @@
+@font-face {
+    font-family: Spartan;
+    src: url("Spartan-Medium.ttf");
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Spartan;
+}
+body {
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+}
+button {
+    background-color: inherit;
+    border: none;
+}
+nav {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100vw;
+}
+.list_wrapper {
+    display: flex;
+    font-size: .9rem;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 0px;
+    overflow: hidden;
+    background-color: white;
+    transition: 1s all;
+    z-index: 10;
+}
+.list_wrapper div {
+    padding: .8rem 0;
+}
+.list_wrapper a {
+    font-weight: bold;
+    text-transform: lowercase;
+    padding: 0 .6rem;
+}
+.list_wrapper button {
+    padding-left: 1rem;
+    padding-top: .1rem;
+}
+.menu_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    width: 100vw;
+    padding: 1rem 0;
+    background-color: inherit;
+}
+.menu_wrapper button {
+    position: absolute;
+    top: 13px;
+    left: 20px;
+}
+.big_screen_logo {
+    display: none;
+}
+.img_slider {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1rem;
+    width: 100vw;
+    z-index: 0;
+}
+img[class^=img] {
+    position: relative;
+    left: 0px;
+    transition: 1s all;
+}
+.slide_btns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+}
+.container {
+    padding: 2.5rem;
+}
+.slide_btns button {
+    background-color: inherit;
+    border: none;
+}
+.con_title{
+    letter-spacing: 5px;
+    text-transform: lowercase;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+.con_article {
+    text-align: left;
+    margin-top: 1rem;
+    color: hsl(0, 0%, 63%);
+}
+.buy_btn {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin-top: 3rem;
+    font-weight: bold;
+    letter-spacing: 10px;
+    text-transform: lowercase;
+    font-variant: small-caps;
+}
+.background_wrapper {
+    background-color: black;
+    height: auto;
+    width: 100vw;
+    z-index: 10;
+}
+.cover::after {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(0,0,0,.7);
+}
+.not_slider_img {
+    width: 100vw;
+}
+.desktop {
+    display: none;
+}
+@media screen and (max-width: 1249px){
+    img[class^=img]{
+        min-width: 100vw;
+    }    
+}
+@media screen and (min-width:1250px) {
+    .menu_wrapper {
+        display: none;
+    }
+    .list_wrapper {
+        background-color: inherit;
+        position: absolute;
+        left: 20px;
+        top: 50px;
+        max-height: 150px;
+    }
+    .list_wrapper button {
+        display: none;
+    }
+    .list_wrapper a {
+        color: white;
+        font-size: .9rem;
+        font-weight: normal;
+    }
+    .big_screen_logo {
+        display: flex;
+        margin: 0 2rem;
+    }
+    .not_slider_img {
+        width: auto;
+        margin-top: 16.5px;
+    }
+    .big_screen {
+        display: grid;
+        grid-template-columns: auto 40%;
+    }
+    .big_screen .container {
+        padding: 0 3.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .big_screen .buy_btn {
+        margin-bottom: 3rem;
+    }
+    .swap_title {
+        font-size: 2rem;
+    }
+    .img_slider{
+        width: 60vw;
+    }
+    .slide_btns {
+        height: 65px;
+        width: 130px;
+    }
+    .big_screen_two {
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto auto auto;
+        margin-top: -32px;
+    }
+    .big_screen_two .container {
+        padding: 0 2.5rem;
+    }
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: flex;
+        min-width: 60vw;
+        height: 100%;
+    }
+}
