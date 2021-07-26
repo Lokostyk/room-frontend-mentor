@@ -1,3 +1,3 @@
-#Website desined by fronted mentor and created by Marcin Ziemba
+# Website desined by fronted mentor and created by Marcin Ziemba
 
 
