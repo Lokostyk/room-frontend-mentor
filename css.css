@@ -88,14 +88,18 @@ img[class^=img] {
     width: 100px;
     right: 0;
     bottom: 0;
-    background-color: black;
 }
 .container {
     padding: 2.5rem;
 }
 .slide_btns button {
-    background-color: inherit;
+    width: 50%;
+    height: 100%;
+    background-color: black;
     border: none;
+}
+.slide_btns button:hover {
+    background-color: hsl(0, 0%, 63%);
 }
 .con_title{
     letter-spacing: 5px;
@@ -118,6 +122,12 @@ img[class^=img] {
     text-transform: lowercase;
     font-variant: small-caps;
 }
+.buy_btn:hover {
+    color: hsl(0, 0%, 63%);
+}
+.buy_btn:hover img {
+    opacity: .5;
+}
 .background_wrapper {
     background-color: black;
     height: auto;
@@ -138,6 +148,10 @@ img[class^=img] {
 }
 .desktop {
     display: none;
+}
+.attribution {
+    padding-top: .2rem;
+    text-align: center;
 }
 @media screen and (max-width: 1249px){
     img[class^=img]{
@@ -161,7 +175,17 @@ img[class^=img] {
     .list_wrapper a {
         color: white;
         font-size: .9rem;
+        padding-bottom: .3rem;
         font-weight: normal;
+        cursor: pointer;
+        background-image: linear-gradient(white,white);
+        background-repeat: no-repeat;
+        background-position: 50% 100%;
+        background-size: 0% 0%;
+        transition: .5s all;
+    }
+    .list_wrapper a:hover {
+        background-size: 50% 5%;
     }
     .big_screen_logo {
         display: flex;
